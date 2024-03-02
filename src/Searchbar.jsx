@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 function Searchbar() {
     const [modalOpen, setModalOpen] = useState(false);
 
-    const openModal = () => {
+    const openModal = (event) => {
+        event.preventDefault();  // Prevent default form submission behavior
         console.log("openModal called");
         setModalOpen(true);
     };
@@ -29,13 +30,14 @@ function Searchbar() {
                 </div>
                 <button onClick={openModal} className="text-black font-bold px-3 rounded-md py-3.5 ml-3 hover:bg-gray-200">+</button>
 
+
                 {modalOpen && (
                 <div id="default-modal" className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full md:inset-0 h-screen bg-black bg-opacity-50">
                     <div className="relative p-4 w-full max-w-2xl">
                         <div className="relative bg-white rounded-lg shadow">
                             <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
                                 <h3 className="text-xl font-semibold text-gray-900">
-                                    Terms of Service
+                                    Post Details
                                 </h3>
                                 <button onClick={closeModal} className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center">
                                     <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -45,16 +47,14 @@ function Searchbar() {
                                 </button>
                             </div>
                             <div className="p-4 md:p-5 space-y-4">
-                                <p className="text-base leading-relaxed text-gray-500">
-                                    With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                                </p>
-                                <p className="text-base leading-relaxed text-gray-500">
-                                    The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                                </p>
+                                <input type="search" id="default-search" className="block w-full p-3 ps-5 text-sm text-gray-900 border border-gray-400 rounded-lg" placeholder="Title:" />
+                                <input type="search" id="default-search" className="block w-full p-3 ps-5 text-sm text-gray-900 border border-gray-400 rounded-lg" placeholder="Description:" />
+<input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file"></input>
+
                             </div>
                             <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b">
-                                <button onClick={closeModal} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">I accept</button>
-                                <button onClick={() => setModalOpen(false)} className="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">Decline</button>
+                                <button onClick={closeModal} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Create</button>
+                                <button onClick={() => setModalOpen(false)} className="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">Cancel</button>
 
                             </div>
                         </div>
