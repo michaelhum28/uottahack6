@@ -3,11 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Searchbar from "./Searchbar.jsx";
-import { Theme } from '@radix-ui/themes';
+import "@radix-ui/themes/styles.css"
 import MyApp from './button.jsx';
 import Forum from './Forum.jsx';
 import SideMenu from './SideMenu.jsx';
-import card from './card.jsx';
+import Card from './Card.jsx';
 
 function App() {
 
@@ -16,19 +16,20 @@ function App() {
       <div className="">
         <Searchbar />
       </div>
-    
+
       <div className="Bar">
         <SideMenu />
-        
       </div>
-      <div className='MainContent'>
-        <card />
-        <card />
-        <card />
-        <card />
-        <card />
-        <Forum />
+      
+      <div className="container">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
+      
+      <Forum />
     </>
   )
 }
