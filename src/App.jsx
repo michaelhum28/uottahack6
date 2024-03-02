@@ -6,7 +6,6 @@ import Searchbar from "./Searchbar.jsx";
 import "@radix-ui/themes/styles.css"
 import MyApp from './button.jsx';
 import Forum from './Forum.jsx';
-import SideMenu from './SideMenu.jsx';
 import Card from './card.jsx';
 
 function App() {
@@ -16,15 +15,8 @@ function App() {
       <div className="">
         <Searchbar />
       </div>
-    
-      <div className="Bar">
-        <SideMenu />
-        
-      </div>
       
       <div className="container">
-        <Card />
-        <Card />
         <Card />
         <Card />
         <Card />
