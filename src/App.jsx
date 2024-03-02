@@ -16,9 +16,10 @@ function App() {
       <div className="">
         <Searchbar />
       </div>
-
+    
       <div className="Bar">
         <SideMenu />
+        
       </div>
       
       <div className="container">
