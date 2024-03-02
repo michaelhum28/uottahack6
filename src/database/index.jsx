@@ -10,7 +10,7 @@ export const connectToDatabase = async () => {
     if (!MONGODB_URI) throw new Error ('Missing URI connection');
 
     cached.promise = cached.promise || mongoose.connect(MONGODB_URI, {
-        dbName: 'Eventifyr',
+        dbName: 'uottahack',
         bufferCommands: false,
     })
 
