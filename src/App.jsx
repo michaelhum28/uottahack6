@@ -15,12 +15,11 @@ function App() {
     <>
       <div className="">
         <Searchbar />
+        <SideMenu />
+
       </div>
     
-      <div className="Bar">
-        <SideMenu />
-        
-      </div>
+
       <div className='MainContent'>
         <card />
         <card />
