@@ -36,7 +36,7 @@ function Searchbar() {
                     <div className="relative p-4 w-full max-w-2xl">
                         <div className="relative bg-white rounded-lg shadow">
                             <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
-                                <h3 className="text-xl font-semibold text-gray-900">
+                                <h3 className="text-xl font-semibold text-gray-900git">
                                     Post Details
                                 </h3>
                                 <button onClick={closeModal} className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center">
@@ -53,7 +53,7 @@ function Searchbar() {
                                     id="default-search"
                                     className="block w-full p-12 ps-5 text-sm text-gray-900 border border-gray-400 rounded-lg"
                                     placeholder="Description:"
-                                    style={{ paddingTop: '12px' }} // Adjust the padding-top as needed
+                                    style={{ paddingTop: '12px' }}
                                 />
                                 <div class="flex items-center justify-center w-full">
                                     <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
