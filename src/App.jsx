@@ -7,7 +7,7 @@ import "@radix-ui/themes/styles.css"
 import MyApp from './button.jsx';
 import Forum from './Forum.jsx';
 import SideMenu from './SideMenu.jsx';
-import Card from './Card.jsx';
+import Card from './card.jsx';
 
 function App() {
 
