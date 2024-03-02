@@ -11,13 +11,11 @@ const Card = () => (
     </Tabs.List>
     <Tabs.Content className="TabsContent" value="tab1">
       <img src="https://source.unsplash.com/random/800x600" alt="Random image" />
-      <p className="Text">Content Description Goes Here</p>
+      <p className="Text mt-2">Content Description Goes Here</p>
 
       <div style={{ display: 'flex', marginTop: 20, justifyContent: 'flex-end' }}>
-        <button className="Button green">Like</button>
-      </div>
-      <div style={{ display: 'flex', marginTop: 20, justifyContent: 'flex-end' }}>
-        <button className="Button Blue">Save</button>
+        <button className="Button hover:text-gray-600">Like</button>
+        <button className="Button green">Save</button>
       </div>
     </Tabs.Content>
   </Tabs.Root>

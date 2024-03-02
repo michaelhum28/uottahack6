@@ -4,7 +4,7 @@ function Searchbar() {
     const [modalOpen, setModalOpen] = useState(false);
 
     const openModal = (event) => {
-        event.preventDefault();  // Prevent default form submission behavior
+        event.preventDefault();
         console.log("openModal called");
         setModalOpen(true);
     };
@@ -50,7 +50,8 @@ function Searchbar() {
                                 <div class="flex items-center justify-center w-full">
                                     <input type="search" id="default-search" className="block w-full p-3 ps-5 text-sm text-gray-900 border border-gray-400 rounded-lg" placeholder="Title:" />
                                 </div>
-                                <div class="flex items-center justify-center w-full"><input
+                                <div class="flex items-center justify-center w-full">
+                                    <input
                                         type="search"
                                         id="default-search"
                                         className="block w-full p-12 ps-5 text-sm text-gray-900 border border-gray-400 rounded-lg"
