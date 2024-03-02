@@ -16,13 +16,13 @@ function App() {
         <Searchbar />
       </div>
       
-      <div className="container">
+      <div className="container px-12">
         <Card />
         <Card />
         <Card />
       </div>
       
-      <Forum />
+      {/* <Forum /> */}
     </>
   )
 }
