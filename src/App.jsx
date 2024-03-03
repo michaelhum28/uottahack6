@@ -17,9 +17,7 @@ function App() {
       </div>
       
       <div className="container px-12">
-        <Card />
-        <Card />
-        <Card />
+        <Card name="csi2110" description="somethng"/>
       </div>
       
       {/* <Forum /> */}

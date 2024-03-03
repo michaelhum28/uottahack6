@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 
 function Searchbar() {
     const [modalOpen, setModalOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [name, setName] = useState("")
+    const [description, setDesc] = useState("")
+
+
 
     const openModal = (event) => {
         event.preventDefault();
@@ -15,16 +18,37 @@ function Searchbar() {
         setModalOpen(false);
     };
 
-    const handleImageChange = (event) => {
-        const file = event.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onloadend = () => {
-            setSelectedImage(reader.result);
-          };
-          reader.readAsDataURL(file);
-        }
-    };
+    async function handleCreate(name, description){
+        await postStreak(name, description);
+        setModalOpen(false);
+        getStreak();
+    }
+
+    function getStreak(){
+        
+    }
+
+    // const handleCreate = (name, desc) => {
+    //     postStreak(name, desc);
+    //     setModalOpen(false);
+
+    // };
+
+    const postStreak = (name, description) => {
+        console.log("ROOOOOOOOOOOOOOOO");
+		return {
+			courses: fetch("http://localhost:4040/courses", {
+				method: "POST",
+				mode: "cors",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({ name, description }),
+			})
+				.then((request) => request.json())
+				.then((r) => console.log(r.status)),
+		};
+	};
 
     return (
         <div>
@@ -59,12 +83,14 @@ function Searchbar() {
                                 </button>
                             </div>
                             <div className="p-4 md:p-5 space-y-4">
-                                <div class="flex items-center justify-center w-full">
-                                    <input type="search" id="default-search" className="block w-full p-3 ps-5 text-sm text-gray-900 border border-gray-400 rounded-lg" placeholder="Title:" />
+                                <div className="flex items-center justify-center w-full">
+                                    <input type="search" name="aaaaaaaaa" onChange={e=>setName(e.target.value)} id="default-search" className="block w-full p-3 ps-5 text-sm text-gray-900 border border-gray-400 rounded-lg" placeholder="Title:" />
                                 </div>
-                                <div class="flex items-center justify-center w-full">
+                                <div className="flex items-center justify-center w-full">
                                     <input
                                         type="search"
+                                        description = "aaaaaa"
+                                        onChange={e=>setDesc(e.target.value)}
                                         id="default-search"
                                         className="block w-full p-12 ps-5 text-sm text-gray-900 border border-gray-400 rounded-lg"
                                         placeholder="Description:"
@@ -85,7 +111,7 @@ function Searchbar() {
                                 </div> */}
                             </div>
                             <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b">
-                                <button onClick={closeModal} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Create</button>
+                                <button onClick={() => handleCreate(name, description) } className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Create</button>
                                 <button onClick={() => setModalOpen(false)} className="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">Cancel</button>
 
                             </div>
@@ -96,7 +122,9 @@ function Searchbar() {
             </form>
 
             
+            
         </div>
+        
     );
 }
 

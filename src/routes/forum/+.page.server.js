@@ -1,6 +1,6 @@
 export const load = () => {
     return {
-        streams: {leaderboard: fetch("http://localhost:5173/leaderboard")
+        streams: {courses: fetch("http://localhost:5173/courses")
         .then((r) => r.json())}
     }
 }
