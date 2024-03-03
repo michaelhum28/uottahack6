@@ -18,8 +18,6 @@ function App() {
       
       <div className="container px-12">
         <Card />
-        <Card />
-        <Card />
       </div>
       
       {/* <Forum /> */}

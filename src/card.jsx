@@ -2,6 +2,11 @@ import React from 'react';
 import * as Tabs from '@radix-ui/react-tabs';
 import '/src/styles/Card.css';
 
+const dummyFunc = () => {
+
+}
+
+
 const Card = () => (
   <Tabs.Root className="TabsRoot" defaultValue="tab1">
     <Tabs.List className="TabsList" aria-label="Manage your account">
@@ -14,7 +19,7 @@ const Card = () => (
       <p className="Text mt-2">Content Description Goes Here</p>
 
       <div style={{ display: 'flex', marginTop: 20, justifyContent: 'flex-end' }}>
-        <button className="Button hover:text-gray-600">Like</button>
+        <button onClick={dummyFunc} className="Button hover:text-gray-600">Like</button>
         <button className="Button green">Save</button>
       </div>
     </Tabs.Content>

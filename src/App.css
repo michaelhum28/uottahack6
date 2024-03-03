@@ -1,4 +1,4 @@
-/* styles.css */
+styles.css
 
 /* SearchBar */
 .search-bar {
@@ -84,32 +84,7 @@
     display: flex;
   }
 
-  .container {
-    display: flex;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
-  }
+
   
   
-  /* src/components/Header.css */
-.header {
-    background-color: #8cc84b; /* Green background */
-    color: #fff; /* White text */
-    text-align: center;
-    padding: 1em;
-  }
-  
-  /* src/components/MainContent.css */
-  .body {
-    background-color: #c9e2c3; /* Light green background */
-    padding: 2em;
-  }
-  
-  /* src/components/Footer.css */
-  .footer {
-    background-color: #8cc84b; /* Green background */
-    color: #fff; /* White text */
-    text-align: center;
-    padding: 1em;
-  }
   
