@@ -6,8 +6,8 @@ import cors from 'cors';
 
 const app = express()
 
-const db = new Database('forum.db')
-db.exec(`CREATE TABLE IF NOT EXISTS "forum"(
+const db = new Database('coinflip.db')
+db.exec(`CREATE TABLE IF NOT EXISTS "lb"(
 	"id" INTEGER PRIMARY KEY AUTOINCREMENT,
 	"name" TEXT NOT NULL,
 	"streak" INTEGER
@@ -15,13 +15,13 @@ db.exec(`CREATE TABLE IF NOT EXISTS "forum"(
 
 app.use(cors({ origin: true }));
 app.use(express.json())
-app.listen(5173)
+app.listen(4040)
 
-app.get("/forum", (request, res) => { 
+app.get("/leaderboard", (request, res) => { 
     res.json(select.all())
 })
 
-const insert = db.prepare('INSERT INTO forum (title, description, image) VALUES (?,?, ?)');
+const insert = db.prepare('INSERT INTO lb (name, streak) VALUES (?,?)');
 const select = db.prepare('SELECT * FROM lb ORDER BY streak DESC LIMIT 10')
 
 app.post("/streak", (request, res) => {
@@ -33,3 +33,5 @@ app.post("/streak", (request, res) => {
 		}
     	
 });
+
+insert.run("bob",10)
