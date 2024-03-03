@@ -10,7 +10,7 @@ const Card = () => (
       </Tabs.Trigger>
     </Tabs.List>
     <Tabs.Content className="TabsContent" value="tab1">
-      <img src="https://source.unsplash.com/random/800x600" alt="Random image" />
+      {/* <img src="https://source.unsplash.com/random/800x600" alt="Random image" /> */}
       <p className="Text mt-2">Content Description Goes Here</p>
 
       <div style={{ display: 'flex', marginTop: 20, justifyContent: 'flex-end' }}>
