@@ -2,6 +2,11 @@ import React from 'react';
 import * as Tabs from '@radix-ui/react-tabs';
 import '/src/styles/Card.css';
 
+const dummyFunc = () => {
+
+}
+
+
 const Card = ({name, description}) => (
   <Tabs.Root className="TabsRoot" defaultValue="tab1">
     <Tabs.List className="TabsList" aria-label="Manage your account">

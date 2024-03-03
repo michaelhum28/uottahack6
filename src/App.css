@@ -1,0 +1,83 @@
+/* SearchBar */
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #4caf50;
+  }
+  
+  .search-bar button {
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* SideMenu */
+  .side-menu {
+    width: 200px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .side-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .side-menu li {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .side-menu li:hover {
+    text-decoration: underline;
+  }
+  
+  /* Forum */
+  .forum {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .forum h2 {
+    color: #4caf50;
+  }
+  
+  .forum-posts {
+    display: grid;
+    grid-gap: 20px;
+  }
+  
+  .forum-post {
+    border: 1px solid #4caf50;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .forum-post h3 {
+    color: #4caf50;
+  }
+  
+  .forum-post p {
+    color: #555;
+  }
+  
+  /* App */
+  .app {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .main-content {
+    display: flex;
+  }
