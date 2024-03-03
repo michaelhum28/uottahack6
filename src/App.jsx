@@ -16,11 +16,18 @@ function App() {
         <Searchbar />
       </div>
       
-      <div className="container px-12">
-        <Card name="csi2110" description="somethng"/>
+      <div className="flex px-12">
+      <div className="ml-10">
+          <Card name="CSI2110" description="Graphs, sorting, hashing."/>
+        </div>
+        <div className="ml-10">
+          <Card name="CEG2136" description="Designing a CPU and handling CPU control."/></div>
+        <div className="ml-14">
+          <Card name="MAT 1322" description="Calculus 1."/></div>
+        {/* <CourseList/> */}
       </div>
       
-      {/* <Forum /> */}
+      <Forum />
     </>
   )
 }

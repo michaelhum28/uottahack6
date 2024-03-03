@@ -10,7 +10,7 @@ const Forum = () => {
   ];
 
   return (
-    <div className="forum">
+    <div className="forum ml-1">
       <h2>Forum</h2>
       <div className="forum-posts">
         {forumPosts.map(post => (
